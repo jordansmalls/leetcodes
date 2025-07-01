@@ -1,0 +1,15 @@
+{
+  "name": "leetcodes",
+  "version": "1.0.0",
+  "description": "a repository containing leetcode exercises and solutions, probably using a variety of programming languages.",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "Jay Smalls",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}
