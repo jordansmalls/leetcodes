@@ -11,7 +11,6 @@ Given two strings s and t, return true if t is an of s, and false otherwise.
  */
 
 const isAnagram = function (s, t) {
-  // words that are indeed angrams share the same number of characters
   if (s.length !== t.length) return false;
 
   const map = new Map();
