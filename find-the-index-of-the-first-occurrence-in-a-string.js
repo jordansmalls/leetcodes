@@ -17,22 +17,19 @@ Given two strings needle and haystack, return the index of the first occurrence 
 
 // const strStr = (haystack, needle) => haystack.indexOf(needle)
 
-
-
 // sliding window approach
 
-const strStr = function(haystack, needle) {
-    if(needle === "") return 0
-    if(haystack === needle) return 0
+const strStr = function (haystack, needle) {
+  if (needle === "") return 0;
+  if (haystack === needle) return 0;
 
-    for(let i = 0; i <= haystack.length - needle.length; ++i) {
-        if(haystack.slice(i, i + needle.length) === needle) {
-            return i
-        }
+  for (let i = 0; i <= haystack.length - needle.length; ++i) {
+    if (haystack.slice(i, i + needle.length) === needle) {
+      return i;
     }
-    return -1
-}
-
+  }
+  return -1;
+};
 
 /*
 For longer strings and more complex patterns, the V8 engine may employ more advanced algorithms like Boyer-Moore, Knuth-Morris-Pratt (KMP), or Rabin-Karp.
@@ -41,14 +38,14 @@ These algorithms use different strategies to reduce the number of character comp
 For prod level code, the indexOf approach would be simpler, faster, and less error prone
 */
 
-const haystack = "sadbutsad"
-const needle = "sad"
-console.log(strStr(haystack, needle)) // 0
+const haystack = "sadbutsad";
+const needle = "sad";
+console.log(strStr(haystack, needle)); // 0
 
 // Explanation: "sad" occurs at index 0 and 6.
 // The first occurrence is at index 0, so we return 0.
 
-const haystackTwo = "leetcode"
-const needleTwo = "leeto"
-console.log(strStr(haystackTwo, needleTwo)) // -1
+const haystackTwo = "leetcode";
+const needleTwo = "leeto";
+console.log(strStr(haystackTwo, needleTwo)); // -1
 // Explanation: "leeto" did not occur in "leetcode", so we return -1.
